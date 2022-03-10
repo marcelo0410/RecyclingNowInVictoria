@@ -1,15 +1,34 @@
 import Test from './component/test';
+import Header from './component/header';
+import Sorting from './component/sorting';
+import Trending from './component/trending';
+import Footer from './component/footer';
+import Carosel from './component/carousel';
 import './App.css';
+import {BrowserRouter as Router, Switch,Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> Hello World! Let's do Recycling!!!</h1>
-        <h2> good </h2>
-        <Test/>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Header/>
+            <Carosel/>
+          </Route>
+          <Route path="/sorting">
+            <Header/>
+            <Sorting/>
+          </Route>
+          <Route path="/trending">
+            <Header/>
+            <Trending/>
+          </Route>
+        </Switch>
+        <Footer/>
+        
+      </div>
+    </Router>
   );
 }
 

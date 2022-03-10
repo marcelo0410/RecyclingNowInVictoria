@@ -1,0 +1,11 @@
+#outer{
+    background: red;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /*center For  vertically*/
+    justify-content: center;
+    flex-direction: column;
+    /*center for horizontally*/
+    align-items: center;
+}
