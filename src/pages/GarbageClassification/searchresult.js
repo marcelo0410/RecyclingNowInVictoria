@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 export default class searchresult extends Component {
     constructor(props){
         super(props)
@@ -36,7 +37,7 @@ export default class searchresult extends Component {
   render() {
     return (
       <div>
-          {this.state.genreResult? <img src={require(`./images/recyclebin/${this.state.genreResult}bin.jpg`)} style={{width:"200px", marginTop:"3em"}}></img>: null}
+          {this.state.genreResult? <img src={require(`../../assets/images/recyclebin/${this.state.genreResult}bin.jpg`)} style={{width:"200px", marginTop:"3em"}}></img>: null}
       </div>
     )
   }

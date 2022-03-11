@@ -1,9 +1,8 @@
-import Test from './component/test';
-import Header from './component/header';
-import Sorting from './component/sorting';
-import Trending from './component/trending';
-import Footer from './component/footer';
-import Carosel from './component/carousel';
+import Test from './components/test';
+import Header from './layout/nav';
+import Sorting from './pages/sorting';
+import Footer from './layout/footer';
+import Carosel from './layout/carousel';
 import './App.css';
 import {BrowserRouter as Router, Switch,Route} from 'react-router-dom'
 
@@ -14,7 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header/>
-            <Carosel/>
+            
           </Route>
           <Route path="/sorting">
             <Header/>
@@ -22,7 +21,6 @@ function App() {
           </Route>
           <Route path="/trending">
             <Header/>
-            <Trending/>
           </Route>
         </Switch>
         <Footer/>

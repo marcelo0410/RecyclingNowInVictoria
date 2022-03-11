@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import RedBinImage from "./images/plasticbottle/plasticbottle1.jpg"
-import YellowBinImage from "./images/plasticbottle/plasticbottle2.jpg"
-import BlueBinImage from "./images/plasticbottle/plasticbottle1.jpg"
-import GreenBinImage from "./images/plasticbottle/plasticbottle2.jpg"
+import RedBinImage from "../assets/images/plasticbottle/plasticbottle1.jpg"
+import YellowBinImage from "../assets/images/plasticbottle/plasticbottle2.jpg"
+import BlueBinImage from "../assets/images/plasticbottle/plasticbottle1.jpg"
+import GreenBinImage from "../assets/images/plasticbottle/plasticbottle2.jpg"
 
 export default class recyclebin extends Component {
   render() {

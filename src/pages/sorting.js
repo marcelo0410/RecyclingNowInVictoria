@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import Recyclebin from './recyclebin'
-import Waste from './waste'
-import './Style.css'
+import Waste from './GarbageClassification/waste'
+import './style.css'
 
 export default class sorting extends Component {
     constructor(props){

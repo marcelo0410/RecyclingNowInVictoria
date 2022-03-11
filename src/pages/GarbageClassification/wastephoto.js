@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ybin from './images/recyclebin/yellowbin.jpg'
-import p1 from './images/plasticbottle/plasticbottle1.jpg'
+import ybin from '../../assets/images/recyclebin/yellowbin.jpg'
+import p1 from '../../assets/images/plasticbottle/plasticbottle1.jpg'
 
 export default class wastemouseenter extends Component {
 

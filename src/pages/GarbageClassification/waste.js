@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Searchbar from './utils/searchbar/searchbar'
-import Searchresult from '../component/searchresult'
-import Wastemouseenter from '../component/waste-mouseenter-photo'
+import Searchbar from '../../utils/searchbar/searchbar'
+import Searchresult from './searchresult'
+import Wastemouseenter from './wastephoto'
 
 export default class waste extends Component {
   constructor(props){
