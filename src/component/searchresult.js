@@ -6,20 +6,24 @@ export default class searchresult extends Component {
         this.state={
             genreResult:""
         }
-        console.log(1, this)
+        
     }
     componentDidMount(){
-        console.log(2, this)
         this.checkGenre()
     }
+
+    componentDidUpdate(prevProps){
+        if(JSON.stringify(this.props.result) !== JSON.stringify(prevProps.result)){
+            this.checkGenre()
+        }
+    }
+
     checkGenre(){
-        console.log(3, this)
         switch(this.props.result[0].genre){
             case 1:
                 this.setState({
                     genreResult:"green"
                 })
-                console.log(4, this)
                 break
             case 2:
                 this.setState({
