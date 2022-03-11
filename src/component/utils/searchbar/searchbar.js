@@ -11,7 +11,7 @@ export default class searchbar extends Component {
           <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Enter waste's catagory or key word" ref={this.searchWordRef}/>
           <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" onClick={()=>{
             axios
-            .get(`http://localhost:8080/v1/api/search/${this.searchWordRef.current.value}`)
+            .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/search/${this.searchWordRef.current.value}`)
             .then(res =>{
               const responseData = res.data;
               this.props.returnGenre(responseData)
