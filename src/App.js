@@ -4,17 +4,20 @@ import Footer from './layout/footer';
 import Header from './layout/header'
 import Banner from './layout/banner'
 import './App.css';
-import {BrowserRouter as Router, Switch,Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch,Route, Redirect} from 'react-router-dom'
 
 function App() {
   return (
     <Router>
       <div className="App container">
         <Switch>
-          <Route exact path="/">
+          <Route path="/home">
             <Header/>
             <Nav/>
             <Banner/>
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/home" />
           </Route>
           <Route path="/sorting">
             <Header/>

@@ -13,10 +13,10 @@ export default class header extends Component {
             <div>
               <ul class="navbar-link">
                 <li>
-                  <a aria-current="page" href="/">Home</a>
+                  <NavLink to="/home" activeStyle={{ backgroundColor:"#55C595",color: "white"}}>Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/sorting">Garbage Classification</NavLink>
+                  <NavLink to="/sorting" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Garbage Classification</NavLink>
                 </li>
                 <li>
                   <a href="/">Councils Information</a>
