@@ -9,3 +9,27 @@
     /*center for horizontally*/
     align-items: center;
 }
+
+.height-200{
+    height: 200px;
+}
+
+.img-same-wh{
+    width:220px;
+    height:300px;
+}
+
+
+.card-photo-bgc-red:hover{
+    background-color: #FFD8D8;
+}
+
+.card-photo-bgc-yellow:hover{
+    background-color: #FFF84F;
+}
+.card-photo-bgc-green:hover{
+    background-color: #CEFFCD;
+}
+.card-photo-bgc-blue:hover{
+    background-color: #DAEBFF;
+}

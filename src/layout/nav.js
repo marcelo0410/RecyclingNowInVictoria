@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { NavLink, Route } from 'react-router-dom'
 import facebookIcon from '../assets/images/header/facebook.png'
+import emailIcon from '../assets/images/header/email.png'
+import twitterIcon from '../assets/images/header/twitter.png'
 import './style.css'
 export default class header extends Component {
   render() {
@@ -36,12 +38,12 @@ export default class header extends Component {
                 </li>
                 <li>
                   <a href="#">
-                    <img src={facebookIcon}></img>
+                    <img src={twitterIcon}></img>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src={facebookIcon}></img>
+                    <img src={emailIcon}></img>
                   </a>
                 </li>
               </ul>

@@ -26,8 +26,8 @@ export default class sorting extends Component {
     return (
       <div className='ms-4'>
           <div className="outer mt-3">
-            <button type="button" onClick={this.showBinComponent} className={this.state.show== true? "btn btn-success":"btn btn-outline-success"} >BINS</button>
-            <button type="button" onClick={this.showWasteComponent} className={this.state.show== false? "btn btn-success":"btn btn-outline-success"}>WASTE</button>
+            <button type="button" onClick={this.showBinComponent} className={this.state.show== true? "btn btn-success":"btn btn-outline-success"} >Type of bins</button>
+            <button type="button" onClick={this.showWasteComponent} className={this.state.show== false? "btn btn-success":"btn btn-outline-success"}>Garbage items</button>
             
           </div>
           <div>

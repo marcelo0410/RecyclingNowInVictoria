@@ -1,62 +1,55 @@
 import React, { Component } from 'react'
-import RedBinImage from "../assets/images/plasticbottle/plasticbottle1.jpg"
-import YellowBinImage from "../assets/images/plasticbottle/plasticbottle2.jpg"
-import BlueBinImage from "../assets/images/plasticbottle/plasticbottle1.jpg"
-import GreenBinImage from "../assets/images/plasticbottle/plasticbottle2.jpg"
+import RedBinImage from "../assets/images/recyclebin/redbin.png"
+import YellowBinImage from "../assets/images/recyclebin/yellowbin.png"
+import BlueBinImage from "../assets/images/recyclebin/bluebin.png"
+import GreenBinImage from "../assets/images/recyclebin/greenbin.png"
+import './style.css'
 
 export default class recyclebin extends Component {
   render() {
     return (
-<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
-  <div class="col">
-    <div class="card h-100">
-      <img src={RedBinImage} class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">Red</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="card-group mt-5">
+        <div class="card">
+          <div className='card-photo-bgc-red'>
+            <img src={RedBinImage} class="card-img-top img-same-wh" alt="..."/>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div className='card-photo-bgc-yellow'>
+            <img src={YellowBinImage} class="card-img-top img-same-wh" alt="..."/>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div className='card-photo-bgc-green'>
+            <img src={GreenBinImage} class="card-img-top img-same-wh" alt="..."/>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div className='card-photo-bgc-blue'>
+            <img src={BlueBinImage} class="card-img-top img-same-wh" alt="..."/>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src={RedBinImage} class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">Yellow</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src={RedBinImage} class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">Blue</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src={RedBinImage} class="card-img-top" alt="..."/>
-      <div class="card-body">
-        <h5 class="card-title">Green</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-</div>
     )
   }
 }
