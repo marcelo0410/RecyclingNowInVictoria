@@ -1,30 +1,48 @@
 import React, { Component } from 'react'
 import { NavLink, Route } from 'react-router-dom'
+import facebookIcon from '../assets/images/header/facebook.png'
+import './style.css'
 export default class header extends Component {
   render() {
     return (
       <div>
-        <nav style={{background:"green"}} class="navbar navbar-expand-lg navbar-dark " aria-label="Ninth navbar example">
-          <div class="container-xl">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExample07XL">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <nav  aria-label="Ninth navbar example">
+          <div className="navbar">
+            <div>
+              <ul class="navbar-link">
+                <li>
+                  <a aria-current="page" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                  <NavLink className="nav-link active" to="/sorting">Trash Sorting</NavLink>
+                <li>
+                  <NavLink to="/sorting">Garbage Classification</NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">Councils</a>
+                <li>
+                  <a href="/">Councils Information</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">Activity</a>
+                <li>
+                  <a href="/">Events</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">Others</a>
+                <li>
+                  <a href="/">Other Resources</a>
+                </li>
+              </ul>
+            </div>
+            <div id="nav-socialmedia-icon">
+              <ul className='navbar-social'>
+                <li>
+                  <a href="#">
+                    <img src={facebookIcon}></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src={facebookIcon}></img>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src={facebookIcon}></img>
+                  </a>
                 </li>
               </ul>
             </div>

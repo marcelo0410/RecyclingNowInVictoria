@@ -1,11 +1,83 @@
-body {
-  background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 
-.container {
-  max-width: 960px;
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
 }
 
-.pricing-header {
-  max-width: 700px;
+.navbar-link{
+    display: flex;
+    font-size: 12px;
+    line-height: 40px;
+    list-style-type: none;
+}
+
+.navbar-link a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    width: 140px;
+}
+.navbar-link a:hover{
+    background-color:#55C595;
+    color: white;
+}
+
+.navbar-link li{
+    padding: 0 auto;
+}
+
+.navbar-social{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-social img{
+    width: 15px;
+}
+
+.navbar-social a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    width: 40px;
+}
+.navbar-social a:hover{
+    background-color:#55C595;
+    color: white;
+}
+
+.banner{
+    background-image: url("../assets/images/banner/banner.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+}
+
+.banner p{
+    text-align: right;
+    padding: 10px;
+    font-size: 50px;
+}
+
+.banner a{
+    padding-top: 10px;
+    float: right;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: #55C595;
+    width: 200px;
+    height: 50px;
 }
