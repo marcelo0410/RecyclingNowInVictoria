@@ -9,7 +9,7 @@ export default class header extends Component {
     return (
       <div>
         <nav  aria-label="Ninth navbar example">
-          <div className="navbar">
+          <div className="navbar" style={{height:"42px", marginLeft:"0px"}}>
             <div>
               <ul class="navbar-link">
                 <li>

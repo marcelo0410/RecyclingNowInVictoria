@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export default class footer extends Component {
   render() {
     return (
-      <footer class="pt-4 my-md-5 pt-md-5 border-top ms-4" style={{background:"#55C595"}}>
+      <footer class="pt-4 mt-1 pt-md-5 border-top" style={{background:"#55C595", marginLeft:"32px"}}>
         <div class="row">
           <div class="col-6 col-md">
             <h5 style={{color:"white"}}>Garbage Classification</h5>
