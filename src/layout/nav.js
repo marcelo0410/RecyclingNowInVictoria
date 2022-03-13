@@ -19,7 +19,7 @@ export default class header extends Component {
                   <NavLink to="/sorting" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Garbage Classification</NavLink>
                 </li>
                 <li>
-                  <a href="/">Councils Information</a>
+                <NavLink to="/council" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Council Information</NavLink>
                 </li>
                 <li>
                   <a href="/">Events</a>

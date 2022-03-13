@@ -3,6 +3,7 @@ import Sorting from './pages/sorting';
 import Footer from './layout/footer';
 import Header from './layout/header'
 import Banner from './layout/banner'
+import CouncilVis from './pages/CouncilVis/councilvis'
 import './App.css';
 import {BrowserRouter as Router, Switch,Route, Redirect} from 'react-router-dom'
 
@@ -10,9 +11,9 @@ function App() {
   return (
     <Router>
       <div className="App container">
+        <Header/>
         <Switch>
           <Route path="/home">
-            <Header/>
             <Nav/>
             <Banner/>
           </Route>
@@ -20,13 +21,12 @@ function App() {
             <Redirect to="/home" />
           </Route>
           <Route path="/sorting">
-            <Header/>
             <Nav/>
             <Sorting/>
           </Route>
-          <Route path="/trending">
-            <Header/>
+          <Route path="/council">
             <Nav/>
+            <CouncilVis/>
           </Route>
         </Switch>
         <Footer/>

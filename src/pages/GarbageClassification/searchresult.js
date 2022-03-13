@@ -13,30 +13,6 @@ export default class searchresult extends Component {
         this.photoPostfix = "_bin.png?raw=true"
         
     }
-    componentDidMount(){
-        // this.checkGenre()
-    }
-
-    componentDidUpdate(prevProps){
-        // if(JSON.stringify(this.props.result) !== JSON.stringify(prevProps.result)){
-        //     this.checkGenre()
-        // }
-    }
-
-    checkGenre(){
-        // switch(this.props.result[0].genre){
-        //     case 1:
-        //         this.setState({
-        //             genreResult:"green"
-        //         })
-        //         break
-        //     case 2:
-        //         this.setState({
-        //             genreResult:"yellow"
-        //         })
-        //         break
-        // }
-    }
 
     checkBinColor(binId){
         switch(binId){
@@ -58,17 +34,6 @@ export default class searchresult extends Component {
 
   render() {
     return (
-    //   <div style={{textAlign: "center", marginTop:"30px"}}>
-    //       <ul style={{width:"800px", listStyleType: "none", display:"inline-block"}}>
-    //           <li style={{display:"flex", height:"100px", borderBottom:"1px solid", justifyContent:"space-between"}}>
-    //               <img style={{float:"left", width:"30%", height:"100%"}} src={this.props.result[0].exampleLink}></img>
-    //               <div>
-    //                 <p style={{fontSize:"12px"}}>title</p>
-    //                 <h3 style={{fontSize:"20px"}}>desc</h3>
-    //               </div>
-    //               <img style={{float:"right", width:"30%", height:"100%"}} src={this.props.result[0].exampleLink}></img>
-    //           </li>
-    //       </ul>
           <div style={{textAlign: "center", marginTop:"30px"}}>
           {
               
@@ -87,7 +52,6 @@ export default class searchresult extends Component {
               ))
           }
           </div>
-    //   </div>
     )
   }
 }
