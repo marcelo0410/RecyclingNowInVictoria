@@ -49,7 +49,7 @@ export default class searchresult extends Component {
             case 3:
                 return "blue"
                 break
-            case 1:
+            case 4:
                 return "green"
                 break
         }
@@ -76,7 +76,7 @@ export default class searchresult extends Component {
                     <ul style={{width:"800px", listStyleType: "none", display:"inline-block"}}>
                         <li style={{display:"flex", height:"100px", borderBottom:"1px solid #CFCFCF", justifyContent:"space-between"}}>
                             <img style={{float:"left", width:"18%", height:"100%", paddingBottom:"10px", paddingLeft:"15px"}} src={item.exampleLink}></img>
-                            <div style={{fontSize:"20px", textAlign:"left", paddingLeft:"10px", marginTop:"8px"}}>
+                            <div style={{fontSize:"20px", textAlign:"left", marginTop:"8px", width:"57%"}}>
                                 <h3 style={{fontSize:"20px"}}>{item.exampleName}</h3>
                                 <p style={{fontSize:"12px"}}>{item.exampleIntro}</p>
                             </div>
