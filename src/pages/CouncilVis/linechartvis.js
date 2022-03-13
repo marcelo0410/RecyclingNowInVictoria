@@ -1,37 +1,81 @@
-import React, { Component } from 'react'
-import {
-    XYPlot,
-    XAxis,
-    YAxis,
-    VerticalGridLines,
-    HorizontalGridLines,
-    LineMarkSeries
-  } from 'react-vis';
-  import '../../../node_modules/react-vis/dist/style.css';
 
-export default class linechartvis extends Component {
-  render() {
-    return (
-        <XYPlot width={300} height={300}>
-        <VerticalGridLines />
-        <HorizontalGridLines />
-        <XAxis />
-        <YAxis />
-        {/* <LineMarkSeries
-          className="linemark-series-example"
-          style={{
-            strokeWidth: '3px'
-          }}
-          lineStyle={{stroke: 'red'}}
-          markStyle={{stroke: 'blue'}}
-          data={[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15}]}
-        /> */}
-        <LineMarkSeries
-          className="linemark-series-example-2"
-          curve={'curveMonotoneX'}
-          data={[{x: "2021", y: 11}, {x: "2022", y: 29}, {x: "2023", y: 7}]}
-        />
-      </XYPlot>
-    )
+import React from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend
+} from "recharts";
+
+
+export default function Linechartvis(props) {
+
+  const option=[
+    {
+      id:1,
+      line1:"totalCollected",
+      line2:"totalProcessed"
+    },
+    {
+      id:2,
+      line1:"garbageCollected",
+      line2:"totalCollected"
+    },
+    {
+      id:3,
+      line1:"recycleCollected",
+      line2:"recycleProcessed"
+    },
+    {
+      id:4,
+      line1:"organicCollected",
+      line2:"organicProcessed"
+    }
+  ]
+
+  const checkOption1 = () =>{
+    if(props.category){
+      return option[props.category-1]['line1']
+    } else{
+      return option[0]['line1']
+    }
   }
+
+  const checkOption2 = () =>{
+    if(props.category){
+      return option[props.category-1]['line2']
+    } else{
+      return option[0]['line2']
+    }
+  }
+
+  return (
+    <LineChart
+      width={500}
+      height={300}
+      data={props.councilData}
+      margin={{
+        top: 5,
+        right: 30,
+        left: 20,
+        bottom: 5
+      }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="year" />
+      <YAxis />
+      <Tooltip />
+      <Legend />
+      <Line
+        type="monotone"
+        dataKey={checkOption1()}
+        stroke="#8884d8"
+        activeDot={{ r: 8 }}
+      />
+      <Line type="monotone" dataKey={checkOption2()} stroke="#82ca9d" />
+    </LineChart>
+  );
 }
