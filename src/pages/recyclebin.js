@@ -58,10 +58,10 @@ export default class recyclebin extends Component {
     return (
       <div class="card-group mt-5">
         <div class="card">
-          <div className='card-photo-bgc-red' id="1" onClick={this.getId}>
+          <div id="1" onClick={this.getId}>
             <img src={this.state.disable[0]? (this.photoPrefix+this.binArray[0].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[0].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="General waste"/>
           </div>
-          <div class="card-body">
+          {!this.state.disable[0] && (<div class="card-body">
             <h5 class="card-title" style={{fontWeight:"bold", marginBottom:"10px"}}>General waste</h5>
             <p class="card-text">
               <div>This is a red bin to put general wastes, including:</div>
@@ -73,13 +73,14 @@ export default class recyclebin extends Component {
                 <li style={{textAlign:"left"}}>Window glass</li>
               </ul>
             </p>
-          </div>
+          </div>)}
+          
         </div>
         <div class="card">
-          <div className='card-photo-bgc-yellow' id="2" onClick={this.getId}>
+          <div id="2" onClick={this.getId}>
             <img src={this.state.disable[1]? (this.photoPrefix+this.binArray[1].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[1].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="..."/>
           </div>
-          <div class="card-body">
+          {!this.state.disable[1] && (<div class="card-body">
             <h5 class="card-title" style={{fontWeight:"bold", marginBottom:"10px"}}>Recycling</h5>
             <p class="card-text">
               <div>This is a yellow bin to put recyclable wastes, including:</div>
@@ -91,13 +92,14 @@ export default class recyclebin extends Component {
                 <li style={{textAlign:"left"}}>Delivery boxes</li>
               </ul>
             </p>
-          </div>
+          </div>)}
+          
         </div>
         <div class="card">
-          <div className='card-photo-bgc-green' id="3" onClick={this.getId}>
+          <div id="3" onClick={this.getId}>
             <img src={this.state.disable[2]? (this.photoPrefix+this.binArray[2].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[2].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="..."/>
           </div>
-          <div class="card-body">
+          {!this.state.disable[2] && (<div class="card-body">
             <h5 class="card-title" style={{fontWeight:"bold", marginBottom:"10px"}}>Organic wastes</h5>
             <p class="card-text">
               <div>This is a green bin to put organic wastes, including:</div>
@@ -107,13 +109,14 @@ export default class recyclebin extends Component {
                 <li style={{textAlign:"left"}}>Fruit and vegetable peels</li>
               </ul>
             </p>
-          </div>
+          </div>)}
+          
         </div>
         <div class="card">
-          <div className='card-photo-bgc-blue' id="4" onClick={this.getId}>
+          <div id="4" onClick={this.getId}>
             <img src={this.state.disable[3]? (this.photoPrefix+this.binArray[3].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[3].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="..."/>
           </div>
-          <div class="card-body">
+          {!this.state.disable[3] && (<div class="card-body">
             <h5 class="card-title" style={{fontWeight:"bold", marginBottom:"10px"}}>Glass container</h5>
             <p class="card-text">
               <div>(colour may be vary based on location)<br/>This is a blue bin to put the glass containers, including:</div>
@@ -122,7 +125,8 @@ export default class recyclebin extends Component {
                 <li style={{textAlign:"left"}}>Glass containers for food</li>
               </ul>
             </p>
-          </div>
+          </div>)}
+          
         </div>
       </div>
 
