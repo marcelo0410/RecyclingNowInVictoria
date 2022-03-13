@@ -54,7 +54,7 @@ export default class searchbar extends Component {
     this.checkInputValidate()
     if(!this.state.disable){
       axios
-      .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/ge/search/${this.state.searchText}`)
+      .get(`http://localhost:8080/v1/api/ge/search/${this.state.searchText}`)
       .then(res =>{
         const responseData = res.data;
         this.props.returnGenre(responseData)
