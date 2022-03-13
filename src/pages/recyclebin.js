@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import RedBinImage from "../assets/images/recyclebin/redbin.png"
-import YellowBinImage from "../assets/images/recyclebin/yellowbin.png"
-import BlueBinImage from "../assets/images/recyclebin/bluebin.png"
-import GreenBinImage from "../assets/images/recyclebin/greenbin.png"
 import './style.css'
 
 export default class recyclebin extends Component {
@@ -15,32 +11,24 @@ export default class recyclebin extends Component {
     {
       id:1,
       title:"General waste",
-      desc:"This is a red bin to put general wastes, including:",
-      genre:['General rubbish', 'Nappies (wrapped or bagged)','Polystyrene and foam', 'Meat trays', 'Plastic bags and soft plastics', 'Window glass'],
       imgUrl:"garbage1.png",
       hoverUrl:"garbage2.png"
     },
     {
       id:2,
       title:"Recycling",
-      desc:"This is a yellow bin to put recyclable wastes, including:",
-      genre:['Plastic bottles and containers', 'Paper and cardboard','Aluminium cans', 'Steel cans', 'Delivery boxes'],
       imgUrl:"recycle1.png",
       hoverUrl:"recycle2.png"
     },
     {
       id:3,
       title:"organic wastes",
-      desc:"This is a green bin to put organic wastes, including:",
-      genre:['Food wastes', 'Garden soil','Fruit and vegetable peels'],
       imgUrl:"organics1.png",
       hoverUrl:"organics2.png"
     },
     {
       id:4,
       title:"Glass container",
-      desc:"(colour may be vary based on location) </br> This is a blue bin to put the glass containers, including:",
-      genre:['Glass bottles', 'Glass containers for food'],
       imgUrl:"glass.png",
       hoverUrl:"glass2.png"
     },
@@ -56,7 +44,7 @@ export default class recyclebin extends Component {
 
   render() {
     return (
-      <div class="card-group mt-5">
+      <div class="card-group mt-5 ms-2">
         <div class="card">
           <div id="1" onClick={this.getId}>
             <img src={this.state.disable[0]? (this.photoPrefix+this.binArray[0].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[0].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="General waste"/>
@@ -93,7 +81,6 @@ export default class recyclebin extends Component {
               </ul>
             </p>
           </div>)}
-          
         </div>
         <div class="card">
           <div id="3" onClick={this.getId}>

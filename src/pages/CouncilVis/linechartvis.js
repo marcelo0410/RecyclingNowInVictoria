@@ -29,7 +29,7 @@ export default class linechartvis extends Component {
         <LineMarkSeries
           className="linemark-series-example-2"
           curve={'curveMonotoneX'}
-          data={[{x: 1, y: 11}, {x: 1.5, y: 29}, {x: 3, y: 7}]}
+          data={[{x: "2021", y: 11}, {x: "2022", y: 29}, {x: "2023", y: 7}]}
         />
       </XYPlot>
     )

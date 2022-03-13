@@ -33,3 +33,39 @@
 .card-photo-bgc-blue:hover{
     background-color: #DAEBFF;
 }
+
+.btn-round{
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width:200px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.btn-clicked{
+    background-color: #55C595; /* Green */
+    color: white;
+    border: none;
+}
+
+.btn-unclicked{
+    background-color: white;
+    color: #55C595;
+    border-color: #55C595;
+    
+}
+
+.btn-round:focus{
+    width:170px;
+}
+.btn-round::before {
+    content:attr(data-text);
+    position:absolute;
+    left:0;
+    right:0;
+    text-align:center;
+    letter-spacing: initial;
+  }

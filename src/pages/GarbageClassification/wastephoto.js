@@ -104,7 +104,7 @@ export default class wastemouseenter extends Component {
   render() {
     return (
       <div>
-          <div className='mt-5 mb-2' style={{textAlign:"left", fontSize:"20px", marginLeft:"40px", fontWeight:"bold"}}>Common search</div>
+          <div className='mt-4 mb-2' style={{textAlign:"left", fontSize:"20px", marginLeft:"50px", fontWeight:"bold"}}>Common search</div>
           <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap", width:"900px", marginLeft:"35px", marginBottom:"30px"}}>
               {
                 this.state.photoArray.map((item, index) =>(
@@ -112,7 +112,7 @@ export default class wastemouseenter extends Component {
                     <img 
                       src={item.disable? (item.imageUrl):(item.genre)}
                       className=""
-                      style={{width:"180px", height:"100px"}}
+                      style={{width:"180px", height:"180px"}}
                       alt={item.title}
                       id={item.id}
                       onClick={()=>{
