@@ -73,10 +73,9 @@ export default class wastemouseenter extends Component {
           <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap", width:"900px"}}>
               {
                 this.state.photoArray.map((item, index) =>(
-                  <div>
+                  <div key={item.id}>
                     <img 
                       src={item.disable? (require('../../assets/images/' + item.imageUrl)):(require('../../assets/images/' + item.genre))}
-                      key={item.id}
                       className=""
                       style={{width:"180px", height:"100px"}}
                       alt={item.title}
