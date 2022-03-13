@@ -17,32 +17,32 @@ export default class recyclebin extends Component {
       title:"General waste",
       desc:"This is a red bin to put general wastes, including:",
       genre:['General rubbish', 'Nappies (wrapped or bagged)','Polystyrene and foam', 'Meat trays', 'Plastic bags and soft plastics', 'Window glass'],
-      imgUrl:"garbage2.png",
-      hoverUrl:"garbage1.png"
+      imgUrl:"garbage1.png",
+      hoverUrl:"garbage2.png"
     },
     {
       id:2,
       title:"Recycling",
       desc:"This is a yellow bin to put recyclable wastes, including:",
       genre:['Plastic bottles and containers', 'Paper and cardboard','Aluminium cans', 'Steel cans', 'Delivery boxes'],
-      imgUrl:"recycle2.png",
-      hoverUrl:"recycle1.png"
+      imgUrl:"recycle1.png",
+      hoverUrl:"recycle2.png"
     },
     {
       id:3,
       title:"organic wastes",
       desc:"This is a green bin to put organic wastes, including:",
       genre:['Food wastes', 'Garden soil','Fruit and vegetable peels'],
-      imgUrl:"organics2.png",
-      hoverUrl:"organics1.png"
+      imgUrl:"organics1.png",
+      hoverUrl:"organics2.png"
     },
     {
       id:4,
       title:"Glass container",
       desc:"(colour may be vary based on location) </br> This is a blue bin to put the glass containers, including:",
       genre:['Glass bottles', 'Glass containers for food'],
-      imgUrl:"glass2.png",
-      hoverUrl:"glass.png"
+      imgUrl:"glass.png",
+      hoverUrl:"glass2.png"
     },
   ]
 
