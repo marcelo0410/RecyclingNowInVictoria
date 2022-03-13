@@ -26,10 +26,12 @@
     background-color: white;
     width: 152px;
     padding: 0;
+
 }
 .navbar-link a:hover{
     background-color:#55C595;
     color: white;
+    border: #FBFBF9 0.1px solid;
 }
 
 .navbar-link li{
