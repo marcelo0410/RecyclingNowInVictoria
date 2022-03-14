@@ -19,12 +19,10 @@ export default class councilvis extends PureComponent {
         categoryOption:this.state.categoryOption,
         councilData:responseData
       })
-      console.log("Data",this.state.councilData)
     })
   }
 
   updateCouncilAndCategory = (evt) =>{
-    console.log(evt.target.value)
     if(parseInt(evt.target.value) < 6){
       this.setState({
         councilOption:this.state.councilOption,

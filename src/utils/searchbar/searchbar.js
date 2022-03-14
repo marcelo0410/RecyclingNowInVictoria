@@ -3,7 +3,6 @@ import axios from 'axios'
 import './searchbar.css'
 
 export default class searchbar extends Component {
-  // searchWordRef = React.createRef();
   constructor(props){
     super(props)
     this.state={
@@ -11,12 +10,9 @@ export default class searchbar extends Component {
       disable:false,
       valid:false
     }
-    // this.checkInputValidate = this.checkInputValidate.bind(this)
-    
   }
 
   updateInputValue=(evt)=>{
-    console.log("this works")
     const value = evt.target.value.trim();
     if(!value.match(/^[a-zA-Z]+$/)){
       this.setState({
