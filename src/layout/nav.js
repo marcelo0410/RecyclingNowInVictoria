@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink, Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import facebookIcon from '../assets/images/header/facebook.png'
 import emailIcon from '../assets/images/header/email.png'
 import twitterIcon from '../assets/images/header/twitter.png'
@@ -11,7 +11,7 @@ export default class header extends Component {
         <nav  aria-label="Ninth navbar example">
           <div className="navbar" style={{height:"42px", marginLeft:"0px"}}>
             <div>
-              <ul class="navbar-link">
+              <ul class="navbar-link" style={{fontSize:"10px", fontWeight:"bold"}}>
                 <li>
                   <NavLink to="/home" activeStyle={{ backgroundColor:"#55C595",color: "white"}}>Home</NavLink>
                 </li>
@@ -19,7 +19,7 @@ export default class header extends Component {
                   <NavLink to="/sorting" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Garbage Classification</NavLink>
                 </li>
                 <li>
-                <NavLink to="/council" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Council Information</NavLink>
+                  <NavLink to="/council" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Council Information</NavLink>
                 </li>
                 <li>
                   <a href="/">Events</a>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import './style.css'
 
 export default class homepage extends Component {
@@ -17,7 +18,7 @@ export default class homepage extends Component {
             <p className="mt-2" style={{marginLeft:"20px",fontSize:20,paddingBottom:0,paddingTop:50}}>Today in your</p>
             <p className="mt-1" style={{marginLeft:"20px",color:"#55C595",fontWeight: "bold",paddingTop:0}}>Council</p>
             <p style={{marginLeft:"20px",fontSize:15,paddingBottom:0,width:200}}>Learn more activities and events about wastes and sustainability with us!</p>
-            <a style={{marginLeft:"30px"}} href='#'>Explore More&gt;&gt;</a>
+            <NavLink to="/council" style={{marginLeft:"30px"}}>Explore More&gt;&gt;</NavLink>
           </div>
           <div class="col-2 col-md" style={{paddingTop:50, height:300, width:250}}>
             <img class="card-img-top" src="https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/39703e03959e9da1d74c2dd5a45db4dde870e996/glass-bottle.jpeg?raw=true" alt="Card image cap">

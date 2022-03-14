@@ -44,12 +44,16 @@ export default class recyclebin extends Component {
 
   render() {
     return (
-      <div class="card-group mt-5 ms-2">
+      <div>
+      <div style={{marginTop:"30px", textAlign:"left", marginLeft:"20px", fontSize:"17px", fontWeight:"bold"}}>Click on bins for detailed information...</div>
+      <div class="card-group ms-2 mt-2">
         <div class="card">
           <div id="1" onClick={this.getId}>
             <img src={this.state.disable[0]? (this.photoPrefix+this.binArray[0].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[0].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="General waste"/>
           </div>
-          {!this.state.disable[0] && (<div class="card-body">
+          {!this.state.disable[0] && (
+            
+          <div class="card-body">
             <h5 class="card-title" style={{fontWeight:"bold", marginBottom:"10px"}}>General waste</h5>
             <p class="card-text">
               <div>This is a red bin to put general wastes, including:</div>
@@ -116,7 +120,7 @@ export default class recyclebin extends Component {
           
         </div>
       </div>
-
+      </div>
     )
   }
 }

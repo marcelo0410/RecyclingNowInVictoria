@@ -88,7 +88,8 @@ export default class wastemouseenter extends Component {
   render() {
     return (
       <div>
-          <div className='mt-4 mb-2' style={{textAlign:"left", fontSize:"20px", marginLeft:"50px", fontWeight:"bold"}}>Common search</div>
+          <div className='mt-4' style={{textAlign:"left", fontSize:"20px", marginLeft:"40px", fontWeight:"bold"}}>Common search</div>
+          <div style={{textAlign:"left", marginLeft:"40px", fontSize:"15px", marginBottom:"5px"}}>Click on pictures to see which type of rubbish the item is... </div>
           <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap", width:"900px", marginLeft:"35px", marginBottom:"30px"}}>
               {
                 this.state.photoArray.map((item, index) =>(
