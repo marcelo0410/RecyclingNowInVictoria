@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import ybin from '../../assets/images/recyclebin/yellowbin.png'
-import p1 from '../../assets/images/wastephoto/plasticbottle/plasticbottle1.jpg'
 
 export default class wastemouseenter extends Component {
 
@@ -79,8 +77,6 @@ export default class wastemouseenter extends Component {
       ]
     }
 
-    
-
     renderPhoto(item){
       const tempArray = this.state.photoArray
       tempArray[item.id-1]["disable"] = !tempArray[item.id-1]["disable"]
@@ -89,18 +85,6 @@ export default class wastemouseenter extends Component {
       })
     }
 
-    handleMouseEnter = ()=>{
-        this.setState({
-            img:ybin
-        })
-
-    }
-
-    handleMouseOut = () =>{
-        this.setState({
-            img:p1
-        })
-    }
   render() {
     return (
       <div>
