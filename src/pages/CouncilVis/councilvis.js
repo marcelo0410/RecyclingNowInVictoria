@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import LineChartVis from './Linechartvis'
-import DountChartVis from './donutchartvis'
 import axios from 'axios'
 
 export default class councilvis extends PureComponent {
@@ -17,7 +16,7 @@ export default class councilvis extends PureComponent {
       const responseData = res.data;
       this.setState({
         councilOption:this.state.councilOption,
-        categoryOption:"1",
+        categoryOption:this.state.categoryOption,
         councilData:responseData
       })
       console.log("Data",this.state.councilData)
@@ -54,7 +53,6 @@ export default class councilvis extends PureComponent {
         categoryOption:this.state.categoryOption,
         councilData:responseData
       })
-      console.log("Data",this.state.councilData)
     })
   }
 
@@ -65,27 +63,52 @@ export default class councilvis extends PureComponent {
           <h2 className='mt-5 mb-5'>Getting to know your council</h2>
           <div style={{display:"flex", justifyContent:"space-evenly"}}>
             <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>
-              <option value="" disabled selected>Council</option>
-              <option value="43">Melbourne City Council</option>
+              <option value="" disabled>Council</option>
+              <option value="43" selected>Melbourne City Council</option>
               <option value="52">Mornington Peninsula Shire Council</option>
               <option value="73">Whittlesea City Council</option>
               <option value="77">Yarra Ranges Shire Council</option>
             </select>
             <select name="Category" id="Category" onChange={this.updateCouncilAndCategory} value={this.state.categoryOption}>
-              <option value="" disabled selected>Category</option>
-              <option value="1">General Waste</option>
+              <option value="" disabled >Category</option>
+              <option value="1" selected>General Waste</option>
               <option value="2">Garbage</option>
               <option value="3">Recycle</option>
               <option value="4">Organic</option>
             </select>
             <input type="submit" value={"confirm"} onClick={this.requestCouncilData}></input>
           </div>
-          <div style={{display:"flex",justifyContent:"center", marginTop:"50px"}}>
+          <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
             <div>
-              <LineChartVis councilId={this.state.councilOption} councilData={this.state.councilData} category={this.state.categoryOption}/>
+              <h3>Council Location</h3>
+              <img style={{width:"400px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/monash.jpg?raw=true'></img>
             </div>
             <div>
-              <DountChartVis/>
+              <h3>Recycle Service</h3>
+              <div style={{display:"flex",justifyContent:"center", flexWrap:"wrap", width:"340px"}}>
+                <div>
+                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/garbage1.png?raw=true'></img>
+                </div>
+                <div>
+                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/recycle1.png?raw=true'></img>
+                </div>
+                <div>
+                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/organics1.png?raw=true'></img>
+                </div>
+                <div>
+                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/glass1.png?raw=true'></img>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"30px", marginBottom:"40px", flexWrap:"no-wrap"}}>
+            <div>
+                <h3  className='mt-2 mb-2'>Local Council Kerbside Trends</h3>
+                <LineChartVis councilId={this.state.councilOption} councilData={this.state.councilData} category={this.state.categoryOption}/>
+            </div>
+            <div>
+              <h3 className='mt-2'>Recycle Service</h3>
+              <img style={{width:"400px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/monash.jpg?raw=true'></img>
             </div>
           </div>
       </div>

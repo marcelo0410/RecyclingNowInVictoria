@@ -54,7 +54,7 @@ export default function Linechartvis(props) {
 
   return (
     <LineChart
-      width={500}
+      width={450}
       height={300}
       data={props.councilData}
       margin={{
