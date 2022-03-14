@@ -107,7 +107,7 @@ export default class councilvis extends PureComponent {
                 <LineChartVis councilId={this.state.councilOption} councilData={this.state.councilData} category={this.state.categoryOption}/>
             </div>
             <div>
-              <h3 className='mt-2'>Recycle Service</h3>
+              <h3 className='mt-2'>Recycle and Waste</h3>
               <img style={{width:"330px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/39703e03959e9da1d74c2dd5a45db4dde870e996/donut-reference.png?raw=true'></img>
             </div>
           </div>
