@@ -3,6 +3,7 @@ import Sorting from './pages/sorting';
 import Footer from './layout/footer';
 import Header from './layout/header'
 import Banner from './layout/banner'
+import Homepage from './pages/homepage'
 import CouncilVis from './pages/CouncilVis/councilvis'
 import './App.css';
 import {BrowserRouter as Router, Switch,Route, Redirect} from 'react-router-dom'
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home">
             <Nav/>
             <Banner/>
+            <Homepage/>
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
