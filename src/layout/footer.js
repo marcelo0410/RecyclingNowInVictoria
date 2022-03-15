@@ -7,7 +7,7 @@ import './style.css'
 export default class footer extends Component {
   render() {
     return (
-      <footer class="pt-4 mt-1 pt-md-5 border-top" style={{background:"#55C595", marginLeft:"32px"}}>
+      <footer class="pt-4 mt-3 pt-md-5 border-top" style={{background:"#55C595", marginLeft:"32px"}}>
         <div class="row justify-content-md-center">
           <div class="col-2 col-lg-2">
             <h6 style={{color:"white", fontWeight:"bold"}}>Home Page</h6>

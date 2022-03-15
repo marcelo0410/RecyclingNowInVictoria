@@ -22,6 +22,7 @@ export default class waste extends Component {
       <div>
         <Searchbar returnGenre={this.returnGenre}/>
         {this.state.classification? <Searchresult result={this.state.classification}/>:null}
+        { Array.isArray(this.state.classification) && this.state.classification.length < 1? <div style={{marginBotton:"50px"}}>Sorry... The item you've requested is currently not available! <br/> Please enter again!</div>:null}
         {!this.state.classification && <Wastemouseenter/>}
       </div>
     )

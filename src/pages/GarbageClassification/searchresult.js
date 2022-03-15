@@ -8,7 +8,6 @@ export default class searchresult extends Component {
         this.state={
             genreResult:""
         }
-        console.log(props)
         this.photoPrefix = "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/7726bbaf31e138e0839cdd5889f9b7ef9861c7c7/"
         this.photoPostfix = "_bin.png?raw=true"
         
@@ -42,7 +41,7 @@ export default class searchresult extends Component {
                         <li style={{display:"flex", height:"100px", borderBottom:"1px solid #CFCFCF", justifyContent:"space-between"}}>
                             <img style={{float:"left", width:"18%", height:"100%", paddingBottom:"10px", paddingLeft:"15px"}} src={item.exampleLink}></img>
                             <div style={{fontSize:"20px", textAlign:"left", marginTop:"8px", width:"57%"}}>
-                                <h3 style={{fontSize:"20px"}}>{item.exampleName}</h3>
+                                <h3 style={{fontSize:"20px"}}>{item.exampleName.charAt(0).toUpperCase()+item.exampleName.slice(1)}</h3>
                                 <p style={{fontSize:"12px"}}>{item.exampleIntro}</p>
                             </div>
                             <img style={{float:"right", width:"20%", height:"100%", paddingBottom:"10px", paddingLeft:"15px", paddingRight:"15px"}} src={this.photoPrefix+this.checkBinColor(item.binId)+this.photoPostfix}></img>
