@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react'
 import LineChartVis from './Linechartvis'
+import PieChartVis from './piechartvis'
 import axios from 'axios'
 
-export default class councilvis extends PureComponent {
+export default class singlecouncilcanvas extends PureComponent {
   state = {
     councilOption:"",
     categoryOption:"",
@@ -108,7 +109,7 @@ export default class councilvis extends PureComponent {
             </div>
             <div>
               <h3 className='mt-2'>Recycle and Waste</h3>
-              <img style={{width:"330px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/39703e03959e9da1d74c2dd5a45db4dde870e996/donut-reference.png?raw=true'></img>
+              <PieChartVis/>
             </div>
           </div>
       </div>

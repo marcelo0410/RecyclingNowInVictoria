@@ -1,10 +1,10 @@
 import Nav from './layout/nav';
-import Sorting from './pages/sorting';
+import Sorting from './pages/sortingcanvas';
 import Footer from './layout/footer';
 import Header from './layout/header'
 import Banner from './layout/banner'
 import Homepage from './pages/homepage'
-import CouncilVis from './pages/CouncilVis/councilvis'
+import CouncilVis from './pages/CouncilVis/councilcanvas'
 import './App.css';
 import {BrowserRouter as Router, Switch,Route, Redirect} from 'react-router-dom'
 

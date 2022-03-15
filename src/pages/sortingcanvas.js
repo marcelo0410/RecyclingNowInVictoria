@@ -3,7 +3,7 @@ import Recyclebin from './recyclebin'
 import Waste from './GarbageClassification/waste'
 import './style.css'
 
-export default class sorting extends Component {
+export default class sortingcanvas extends Component {
     constructor(props){
         super(props)
         this.state = {
