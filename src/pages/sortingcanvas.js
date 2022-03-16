@@ -16,6 +16,7 @@ export default class sortingcanvas extends Component {
         this.setState({
             show: true
         })
+        
     }
     showWasteComponent(){
       this.setState({
