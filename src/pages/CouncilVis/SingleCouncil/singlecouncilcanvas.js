@@ -59,7 +59,7 @@ export default class singlecouncilcanvas extends PureComponent {
   render() {
     return (
       <div>
-          <h2 className='mt-5'>Getting to know your council</h2>
+          <h2 className='mt-4'>Getting to know your council</h2>
           <div style={{marginTop:"20px", textAlign:"left", marginLeft:"130px", fontSize:"17px", marginBottom:"10px"}}>Select council and category to see the trends...</div>
           <div style={{display:"flex", justifyContent:"space-evenly"}}>
             <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>

@@ -21,10 +21,10 @@ export default class councilcanvas extends Component {
   }
   render() {
     return (
-      <div className='ms-4'>
-          <div className="mt-3">
-            <button type="button" onClick={this.showSingleCouncilComponent} className={this.state.show? "btn btn-success":"btn btn-outline-success"} >Know your council</button>
-            <button type="button" onClick={this.showCouncilsComponent} className={!this.state.show? "btn btn-success":"btn btn-outline-success"}>Council Trends</button>
+      <div className='ms-4 mt-3'>
+          <div className="mt-3" style={{display:"inline-block", marginRight:"10px"}}>
+            <button type="button" onClick={this.showSingleCouncilComponent} className={this.state.show? "btn-round btn-clicked":"btn-round btn-unclicked"}>Know your council</button>
+            <button type="button" onClick={this.showCouncilsComponent} className={!this.state.show? "btn-round btn-clicked":"btn-round btn-unclicked"}>Council Trends</button>
           </div>
           <div>
               {this.state.show}

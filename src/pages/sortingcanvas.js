@@ -26,9 +26,9 @@ export default class sortingcanvas extends Component {
   render() {
     return (
       <div className='ms-4'>
-          <div className="mt-3">
-            <button type="button" onClick={this.showBinComponent} className={this.state.show? "btn btn-success":"btn btn-outline-success"} >Type of bins</button>
-            <button type="button" onClick={this.showWasteComponent} className={!this.state.show? "btn btn-success":"btn btn-outline-success"}>Garbage items</button>
+          <div className="mt-4">
+            <button type="button" onClick={this.showBinComponent} className={this.state.show? "btn-round btn-clicked":"btn-round btn-unclicked"} >Type of bins</button>
+            <button type="button" onClick={this.showWasteComponent} className={!this.state.show? "btn-round btn-clicked":"btn-round btn-unclicked"}>Garbage items</button>
           </div>
           <div>
               {this.state.show}

@@ -10,13 +10,15 @@
 .navbar{
     display: flex;
     justify-content: left;
+    height:"42px";
 }
 
 .navbar-link{
     display: flex;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 40px;
     list-style-type: none;
+    
 }
 
 .navbar-link a{
@@ -24,10 +26,15 @@
     text-decoration: none;
     color: black;
     background-color: white;
-    width: 152px;
+    width: 180px;
     padding: 0;
-
+    
 }
+
+.navbar-link ul{
+    font-weight:"bold";
+}
+
 .navbar-link a:hover{
     background-color:#55C595;
     color: white;

@@ -36,30 +36,37 @@
 
 .btn-round{
     border-radius: 8px;
-    padding: 10px;
     text-align: center;
     width:200px;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    letter-spacing: 2px;
+    height: 35px;
+    
+    /* letter-spacing: 2px; */
 }
 
 .btn-clicked{
     background-color: #55C595; /* Green */
     color: white;
     border: none;
+    width: 200px;
+    text-align: center;
 }
 
 .btn-unclicked{
     background-color: white;
     color: #55C595;
+    border-width: 1px;
+    border-style: solid;
     border-color: #55C595;
+    width: 200px;
+    text-align: center;
     
 }
 
 .btn-round:focus{
-    width:170px;
+    width:200px;
 }
 .btn-round::before {
     content:attr(data-text);

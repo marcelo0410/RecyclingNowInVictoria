@@ -9,9 +9,9 @@ export default class header extends Component {
     return (
       <div>
         <nav  aria-label="Ninth navbar example">
-          <div className="navbar" style={{height:"42px", marginLeft:"0px"}}>
+          <div className="navbar" style={{height:"42px"}}>
             <div>
-              <ul class="navbar-link" style={{fontSize:"10px", fontWeight:"bold"}}>
+              <ul class="navbar-link" style={{justifyContent:"space-evenly"}}>
                 <li>
                   <NavLink to="/home" activeStyle={{ backgroundColor:"#55C595",color: "white"}}>Home</NavLink>
                 </li>
