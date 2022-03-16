@@ -2,10 +2,13 @@ import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
 const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 }
+  { name: "Bass Coast Shire Council", id:1, value: 75.8 },
+  { name: "Wodonga City Council", id:2, value: 69.7 },
+  { name: "Strathbogie Shire Council", id:3, value: 68.6 },
+  { name: "Indigo Shire Council", id:4, value: 65 },
+  { name: "Corangamite Shire Council", id:5, value: 62.7 },
+  { name: "Macedon Ranges Shire Council", id:6, value: 60.5 },
+  { name: "Warrnambool City Council", id:7, value: 60.4 }
 ];
 
 const renderActiveShape = (props) => {
@@ -52,8 +55,8 @@ const renderActiveShape = (props) => {
         cy={cy}
         startAngle={startAngle}
         endAngle={endAngle}
-        innerRadius={outerRadius + 6}
-        outerRadius={outerRadius + 10}
+        innerRadius={outerRadius + 10}
+        outerRadius={outerRadius + 20}
         fill={fill}
       />
       <path
@@ -67,7 +70,7 @@ const renderActiveShape = (props) => {
         y={ey}
         textAnchor={textAnchor}
         fill="#333"
-      >{`PV ${value}`}</text>
+      >{"Diversion Rate"}</text>
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}

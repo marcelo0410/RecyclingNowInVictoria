@@ -110,7 +110,7 @@ export default class singlecouncilcanvas extends PureComponent {
             </div>
             <div>
               <h3 className='mt-2'>Recycle and Waste</h3>
-              <PieChartVis/>
+              <PieChartVis councilId={this.state.councilOption}/>
             </div>
           </div>
       </div>
