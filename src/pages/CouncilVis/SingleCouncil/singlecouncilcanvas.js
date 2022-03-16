@@ -12,7 +12,7 @@ export default class singlecouncilcanvas extends PureComponent {
 
   componentDidMount(){
     axios
-    .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/council/searchCouncil/43`)
+    .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/council/searchCouncil/5`)
     .then(res =>{
       const responseData = res.data;
       this.setState({
@@ -24,7 +24,7 @@ export default class singlecouncilcanvas extends PureComponent {
   }
 
   updateCouncilAndCategory = (evt) =>{
-    if(parseInt(evt.target.value) < 6){
+    if(parseInt(evt.target.value) < 5){
       this.setState({
         councilOption:this.state.councilOption,
         categoryOption:evt.target.value,
@@ -64,10 +64,11 @@ export default class singlecouncilcanvas extends PureComponent {
           <div style={{display:"flex", justifyContent:"space-evenly"}}>
             <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>
               <option value="" disabled>Council</option>
-              <option value="43" selected>Melbourne City Council</option>
-              <option value="52">Mornington Peninsula Shire Council</option>
-              <option value="73">Whittlesea City Council</option>
-              <option value="77">Yarra Ranges Shire Council</option>
+              <option value="5" selected>Bass Coast Shire Council</option>
+              <option value="7">Bayside City Council</option>
+              <option value="16">Corangamite Shire Council</option>
+              <option value="20">Frankston City Council</option>
+              <option value="79">Benalla Rural City Council</option>
             </select>
             <select name="Category" id="Category" onChange={this.updateCouncilAndCategory} value={this.state.categoryOption}>
               <option value="" disabled >Category</option>
