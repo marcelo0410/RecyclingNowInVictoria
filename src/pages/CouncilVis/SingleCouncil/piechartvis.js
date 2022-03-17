@@ -116,7 +116,7 @@ export default function PieChartVis(props) {
 
   const generateCouncilDataById = () =>{
     switch(props.councilId){
-      case "5":
+      case "39":
         return d1
         break
       case "7":
@@ -125,7 +125,7 @@ export default function PieChartVis(props) {
       case "16":
         return d3
         break
-      case "20":
+      case "24":
         return d4
         break
       case "79":

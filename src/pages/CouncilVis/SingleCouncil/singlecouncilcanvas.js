@@ -15,8 +15,8 @@ export default class singlecouncilcanvas extends PureComponent {
   generateCouncilImgUrl = () =>{
     console.log(typeof(this.state.councilOption))
     switch(this.state.councilOption){
-      case "5":
-        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/basscoast.jpg?raw=true"
+      case "39":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/macedonranges.jpg?raw=true"
         break
       case "7":
         return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/bayside.jpg?raw=true"
@@ -24,8 +24,8 @@ export default class singlecouncilcanvas extends PureComponent {
       case "16":
         return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/corangamite.jpg?raw=true"
         break
-      case "20":
-        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/frankston.jpg?raw=true"
+      case "24":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/goldenplains.jpg?raw=true"
         break
       case "79":
         return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/benalla.jpg?raw=true"
@@ -36,7 +36,7 @@ export default class singlecouncilcanvas extends PureComponent {
   generateProvideService = () =>{
     switch(this.state.councilOption){
       // 4
-      case "5":
+      case "39":
         return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/all-bins.jpg?raw=true"
         break
       // 3
@@ -46,7 +46,7 @@ export default class singlecouncilcanvas extends PureComponent {
         return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/no-glass.jpg?raw=true"
         break
       // 2
-      case "20":
+      case "24":
         return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/no-recycle-glass.jpg?raw=true"
         break
     }
@@ -54,11 +54,11 @@ export default class singlecouncilcanvas extends PureComponent {
 
   componentDidMount(){
     axios
-    .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/council/searchCouncil/5`)
+    .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/council/searchCouncil/39`)
     .then(res =>{
       const responseData = res.data;
       this.setState({
-        councilOption:"5",
+        councilOption:"39",
         categoryOption:"1",
         councilData:responseData
       })
@@ -108,10 +108,10 @@ export default class singlecouncilcanvas extends PureComponent {
               
                 <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>
                   <option value="" disabled>Council</option>
-                  <option value="5" selected>Macedon Ranges Shire Council</option>
+                  <option value="39" selected>Macedon Ranges Shire Council</option>
                   <option value="7">Bayside City Council</option>
                   <option value="16">Corangamite Shire Council</option>
-                  <option value="20">Golden Plains Shire Council</option>
+                  <option value="24">Golden Plains Shire Council</option>
                   <option value="79">Benalla Rural City Council</option>
                 </select>
               
@@ -129,27 +129,30 @@ export default class singlecouncilcanvas extends PureComponent {
             
           </div>
           <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"30px", flexWrap:"no-wrap"}}>
-            <div>
+            <div >
               <h3>Council Location</h3>
-              <img style={{width:"400px"}} src={this.generateCouncilImgUrl()}></img>
+              <img style={{width:"400px", marginTop:"60px"}} src={this.generateCouncilImgUrl()}></img>
             </div>
 
             <div>
-                <h3  className='mb-2'>Local Council Kerbside Trends</h3>
+                <h3  className=''>Local Council Kerbside Trends</h3>
+                <p style={{fontSize:"13px", paddingLeft:"40px", textAlign:"left",width:"400px"}}>The plot reflects the trend of kerbside in the council while purple line represents the total volume of kerbside collection and green line represents total volume of kerbside processed. Total processed data doesn't represent total recycled volume.</p>
                 <LineChartVis councilId={this.state.councilOption} councilData={this.state.councilData} category={this.state.categoryOption}/>
             </div>
           </div>
           <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"30px", marginBottom:"40px", flexWrap:"no-wrap"}}>
-          <div>
+            <div>
               <h3>Recycle Service</h3>
+              <p style={{fontSize:"13px", paddingLeft:"0px", textAlign:"left",width:"400px"}}>Recycle services differs in different councils. The picture below represents the type of bins which exist in the corresponding council. The information is for reference only.</p>
               <div style={{display:"flex",justifyContent:"center", flexWrap:"wrap", width:"340px"}}>
                 <div>
-                  <img style={{width:"340px"}} src={this.generateProvideService()}></img>
+                  <img style={{width:"340px", marginTop:'25px'}} src={this.generateProvideService()}></img>
                 </div>
               </div>
             </div>
             <div>
-              <h3 className='mt-2'>Recycle and Waste</h3>
+              <h3 className=''>Diversion rate</h3>
+              <p style={{fontSize:"13px", paddingLeft:"10px", textAlign:"left",width:"400px"}}>Diversion rates measure (usually by weight) the portion of waste not sent to the landfill. Tracking your diversion rate over time is a great way to measure of the effectiveness of reuse, recycling, and organic composting programs.</p>
               <PieChartVis councilId={this.state.councilOption}/>
             </div>
           </div>

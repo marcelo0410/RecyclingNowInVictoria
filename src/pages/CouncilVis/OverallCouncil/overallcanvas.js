@@ -8,26 +8,26 @@ export default class overallcanvas extends Component {
     return (
       <div>
         <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
-            <div>
-              <h3>Nuggests</h3>
-              <p>This is a chart for general waste volumes of those 7 councils in 2019123. </p>
-              <DiversionRateBarChart/>
+            <div style={{justifyContent:"center"}}>
+              <h3 className='mb-2'>Top councils with highest diversion rate</h3>
+              <p style={{marginTop:"30px"}}>The bar plot represents top 7 councils which have the highest diversion rate among 2019-2020.</p>
+            </div>
+            <DiversionRateBarChart/>
+        </div>
+        <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
+            <WasteVolumeBarChart/>
+            <div style={{justifyContent:"center", marginLeft:"10px"}}>
+              <h3 className='mb-2'>General waste volume ranking</h3>
+              <p style={{marginTop:"30px"}}> The bar plot below shows top 7 councils which have the highest total general waste collected of councils in 2019.</p>
             </div>
         </div>
         <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
-            <div>
-                <h3  className=''>Big Mac</h3>
-                <p style={{marginLeft:"10px"}}>This is a chart for general waste volumes of those 7 councils in 2019. </p>
-                <WasteVolumeBarChart/>
-            </div>
 
-        </div>
-        <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
-          <div>
-              <h3  className='mt-2 mb-2'>Hamburger Happy Meal</h3>
-              <p>This is a chart for general waste volumes of those 7 councils in 2019. </p>
-              <StackedPlotVis/>
-          </div>
+            <div style={{justifyContent:"center"}}>
+              <h3 className='mb-2'>Total collected waste &amp; total processed waste ratio</h3>
+              <p style={{marginTop:"30px"}}> The chart shows the ratio between total collected waste and total processed waste. High total processed waste  represents high level of waste recycling in councils.</p>
+            </div>
+            <StackedPlotVis/>
         </div>
         
       </div>
