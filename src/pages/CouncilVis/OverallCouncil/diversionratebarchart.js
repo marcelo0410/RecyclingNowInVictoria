@@ -13,31 +13,31 @@ import {
 const data = [
   {
     name: "Bass Coast Shire",
-    diversionrate: 75.8,
+    DiversionRate: 75.8,
   },
   {
     name: "Wodonga City",
-    diversionrate: 69.7,
+    DiversionRate: 69.7,
   },
   {
     name: "Strathbogie Shire",
-    diversionrate: 68.6
+    DiversionRate: 68.6
   },
   {
     name: "Indigo Shire",
-    diversionrate: 65
+    DiversionRate: 65
   },
   {
     name: "Corangamite Shire",
-    diversionrate: 62.7
+    DiversionRate: 62.7
   },
   {
     name: "Macedon Ranges Shire",
-    diversionrate: 60.5
+    DiversionRate: 60.5
   },
   {
     name: "Warrnambool City",
-    diversionrate: 60.4
+    DiversionRate: 60.4
   }
 ];
 
@@ -60,7 +60,7 @@ export default function DiversionRateBarChart() {
       <Tooltip />
       <Legend />
       <CartesianGrid strokeDasharray="3 3" />
-      <Bar dataKey="diversionrate" fill="#8884d8" background={{ fill: "#eee" }} />
+      <Bar dataKey="DiversionRate" fill="#8884d8" background={{ fill: "#eee" }} />
     </BarChart>
   );
 }

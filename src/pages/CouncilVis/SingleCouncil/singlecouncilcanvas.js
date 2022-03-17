@@ -10,13 +10,6 @@ export default class singlecouncilcanvas extends PureComponent {
     councilData:null
   }
 
-  councilImg = [
-    {id:"5", imgUrl:"https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/basscoast.jpg?raw=true"},
-    {id:"7", imgUrl:"https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/bayside.jpg?raw=true"},
-    {id:"16", imgUrl:""},
-    {id:"20", imgUrl:""},
-    {id:"79", imgUrl:"https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/frankston.jpg?raw=true"}
-  ]
 
   generateCouncilImgUrl = () =>{
     console.log(typeof(this.state.councilOption))
@@ -39,6 +32,25 @@ export default class singlecouncilcanvas extends PureComponent {
     }
   }
 
+  generateProvideService = () =>{
+    switch(this.state.councilOption){
+      // 4
+      case "5":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/all-bins.jpg?raw=true"
+        break
+      // 3
+      case "7":
+      case "16":
+      case "79":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/no-glass.jpg?raw=true"
+        break
+      // 2
+      case "20":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/no-recycle-glass.jpg?raw=true"
+        break
+    }
+  }
+
   componentDidMount(){
     axios
     .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/council/searchCouncil/5`)
@@ -46,7 +58,7 @@ export default class singlecouncilcanvas extends PureComponent {
       const responseData = res.data;
       this.setState({
         councilOption:"5",
-        categoryOption:this.state.categoryOption,
+        categoryOption:"1",
         councilData:responseData
       })
     })
@@ -93,10 +105,10 @@ export default class singlecouncilcanvas extends PureComponent {
           <div style={{display:"flex", justifyContent:"space-evenly"}}>
             <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>
               <option value="" disabled>Council</option>
-              <option value="5" selected>Bass Coast Shire Council</option>
+              <option value="5" selected>Macedon Ranges Shire Council</option>
               <option value="7">Bayside City Council</option>
               <option value="16">Corangamite Shire Council</option>
-              <option value="20">Frankston City Council</option>
+              <option value="20">Golden Plains Shire Council</option>
               <option value="79">Benalla Rural City Council</option>
             </select>
             <select name="Category" id="Category" onChange={this.updateCouncilAndCategory} value={this.state.categoryOption}>
@@ -108,14 +120,14 @@ export default class singlecouncilcanvas extends PureComponent {
             </select>
             <input type="submit" value={"confirm"} onClick={this.requestCouncilData}></input>
           </div>
-          <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
+          <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"30px", flexWrap:"no-wrap"}}>
             <div>
               <h3>Council Location</h3>
               <img style={{width:"400px"}} src={this.generateCouncilImgUrl()}></img>
             </div>
 
             <div>
-                <h3  className='mt-2 mb-2'>Local Council Kerbside Trends</h3>
+                <h3  className='mb-2'>Local Council Kerbside Trends</h3>
                 <LineChartVis councilId={this.state.councilOption} councilData={this.state.councilData} category={this.state.categoryOption}/>
             </div>
           </div>
@@ -124,7 +136,7 @@ export default class singlecouncilcanvas extends PureComponent {
               <h3>Recycle Service</h3>
               <div style={{display:"flex",justifyContent:"center", flexWrap:"wrap", width:"340px"}}>
                 <div>
-                  <img style={{width:"340px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/no-glass.jpg?raw=true'></img>
+                  <img style={{width:"340px"}} src={this.generateProvideService()}></img>
                 </div>
               </div>
             </div>
