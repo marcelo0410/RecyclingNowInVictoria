@@ -51,7 +51,7 @@ const data = [
 export default function StackedPlotVis() {
   return (
     <BarChart
-      width={700}
+      width={690}
       height={350}
       data={data}
       margin={{
@@ -64,7 +64,7 @@ export default function StackedPlotVis() {
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" angle={-12} tick={{fontSize: 12}} interval={0}/>
-      <YAxis />
+      <YAxis label={{ value: 'Weight (kt)', angle: -90, position: 'insideLeft', offset:-8}} />
       <Tooltip />
       <Legend />
       <Bar dataKey="TotalCollected" stackId="a" fill="#8884d8" />

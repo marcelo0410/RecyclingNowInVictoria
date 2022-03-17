@@ -56,7 +56,7 @@ export default function DiversionRateBarChart() {
       barSize={20}
     >
       <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} angle={-20} tick={{fontSize: 12}} interval={0}/>
-      <YAxis />
+      <YAxis label={{ value: 'rate (%)', angle: -90, position: 'insideLeft' }} domain={[0, 100]} />
       <Tooltip />
       <Legend />
       <CartesianGrid strokeDasharray="3 3" />

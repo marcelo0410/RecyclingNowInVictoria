@@ -8,24 +8,26 @@ export default class searchresult extends Component {
         this.state={
             genreResult:""
         }
-        this.photoPrefix = "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/7726bbaf31e138e0839cdd5889f9b7ef9861c7c7/"
-        this.photoPostfix = "_bin.png?raw=true"
-        
+        this.photoPrefix = "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/25282155e9f8f49de5c47874cc861698916fd999/Bins/"
+        this.photoPostfix = ".png?raw=true"
     }
 
     checkBinColor(binId){
         switch(binId){
+            // red
             case 1:
-                return "red"
+                return "garbage1"
                 break
+            // yellow
             case 2:
-                return "yellow"
+                return "recycle1"
                 break
+            // blue
             case 3:
-                return "blue"
+                return "glass1"
                 break
             case 4:
-                return "green"
+                return "organics1"
                 break
         }
 
@@ -44,7 +46,7 @@ export default class searchresult extends Component {
                                 <h3 style={{fontSize:"20px"}}>{item.exampleName.charAt(0).toUpperCase()+item.exampleName.slice(1)}</h3>
                                 <p style={{fontSize:"12px"}}>{item.exampleIntro}</p>
                             </div>
-                            <img style={{float:"right", width:"20%", height:"100%", paddingBottom:"10px", paddingLeft:"15px", paddingRight:"15px"}} src={this.photoPrefix+this.checkBinColor(item.binId)+this.photoPostfix}></img>
+                            <img style={{float:"right", width:"130px", height:"100%", paddingBottom:"10px", paddingLeft:"15px", paddingRight:"15px"}} src={this.photoPrefix+this.checkBinColor(item.binId)+this.photoPostfix}></img>
                         </li>
                     </ul>
                 

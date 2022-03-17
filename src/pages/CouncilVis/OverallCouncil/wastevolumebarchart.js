@@ -55,10 +55,10 @@ export default function DiversionRateBarChart() {
       }}
       barSize={20}
     >
-      <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} angle={-20} tick={{fontSize: 12}} interval={0}/>
-      <YAxis />
+      <XAxis dataKey="name"  scale="point" padding={{ left: 10, right: 10 }} angle={-20} tick={{fontSize: 12}} interval={0} />
+      <YAxis label={{ value: 'Weight (kt)', angle: -90, position: 'insideLeft',  offset: -10 }} />
       <Tooltip />
-      <Legend />
+      <Legend/>
       <CartesianGrid strokeDasharray="3 3" />
       <Bar dataKey="GeneralWasteVolume" fill="#8884d8" background={{ fill: "#eee" }} />
     </BarChart>
