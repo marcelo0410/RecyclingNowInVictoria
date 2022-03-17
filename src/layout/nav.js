@@ -22,7 +22,7 @@ export default class header extends Component {
                   <NavLink to="/council" activeStyle={{backgroundColor:"#55C595",color: "white"}}>Council Information</NavLink>
                 </li>
                 <li>
-                  <a href="/">About</a>
+                <NavLink to="/about" activeStyle={{backgroundColor:"#55C595",color: "white"}}>About</NavLink>
                 </li>
               </ul>
             </div>

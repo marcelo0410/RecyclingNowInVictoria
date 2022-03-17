@@ -6,6 +6,7 @@ import Banner from './layout/banner'
 import Homepage from './pages/homepage'
 import CouncilVis from './pages/CouncilVis/councilcanvas'
 import Login from './pages/login/Login';
+import About from './pages/About'
 import './App.css';
 import {BrowserRouter as Router, Switch,Route, Redirect} from 'react-router-dom'
 import {useState} from 'react'
@@ -47,6 +48,10 @@ function App() {
           <Route path="/council">
             <Nav/>
             <CouncilVis/>
+          </Route>
+          <Route path="/about">
+            <Nav/>
+            <About/>
           </Route>
         </Switch>
         <Footer/>
