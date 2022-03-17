@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import LineChartVis from './Linechartvis'
 import PieChartVis from './piechartvis'
 import axios from 'axios'
+import '../../../pages/style.css'
 
 export default class singlecouncilcanvas extends PureComponent {
   state = {
@@ -101,16 +102,23 @@ export default class singlecouncilcanvas extends PureComponent {
     return (
       <div>
           <h2 className='mt-4'>Getting to know your council</h2>
-          <div style={{marginTop:"20px", textAlign:"left", marginLeft:"130px", fontSize:"17px", marginBottom:"10px"}}>Select council and category to see the trends...</div>
+          <div style={{marginTop:"20px", textAlign:"left", marginLeft:"144px", fontSize:"17px", marginBottom:"10px"}}>Select council and category to see the trends...</div>
           <div style={{display:"flex", justifyContent:"space-evenly"}}>
-            <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>
-              <option value="" disabled>Council</option>
-              <option value="5" selected>Macedon Ranges Shire Council</option>
-              <option value="7">Bayside City Council</option>
-              <option value="16">Corangamite Shire Council</option>
-              <option value="20">Golden Plains Shire Council</option>
-              <option value="79">Benalla Rural City Council</option>
-            </select>
+            <div>
+              
+                <select name="Council" id="council" onChange={this.updateCouncilAndCategory} value={this.state.councilOption}>
+                  <option value="" disabled>Council</option>
+                  <option value="5" selected>Macedon Ranges Shire Council</option>
+                  <option value="7">Bayside City Council</option>
+                  <option value="16">Corangamite Shire Council</option>
+                  <option value="20">Golden Plains Shire Council</option>
+                  <option value="79">Benalla Rural City Council</option>
+                </select>
+              
+              <input type="submit" className='btn-council btn-council-clicked' value={"Search council"} onClick={this.requestCouncilData}></input>
+            </div>
+
+            
             <select name="Category" id="Category" onChange={this.updateCouncilAndCategory} value={this.state.categoryOption}>
               <option value="" disabled >Category</option>
               <option value="1" selected>General Waste</option>
@@ -118,7 +126,7 @@ export default class singlecouncilcanvas extends PureComponent {
               <option value="3">Recycle</option>
               <option value="4">Organic</option>
             </select>
-            <input type="submit" value={"confirm"} onClick={this.requestCouncilData}></input>
+            
           </div>
           <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"30px", flexWrap:"no-wrap"}}>
             <div>

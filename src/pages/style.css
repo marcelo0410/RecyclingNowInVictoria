@@ -46,6 +46,26 @@
     /* letter-spacing: 2px; */
 }
 
+.btn-council{
+    border-radius: 8px;
+    text-align: center;
+    width:100px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    height: 35px;
+    margin-left: 15px;
+    /* letter-spacing: 2px; */
+}
+
+.btn-council-clicked{
+    background-color: #55C595; /* Green */
+    color: white;
+    border: none;
+    width: 140px;
+    text-align: center;
+}
+
 .btn-clicked{
     background-color: #55C595; /* Green */
     color: white;
