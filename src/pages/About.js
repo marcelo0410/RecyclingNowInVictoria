@@ -11,7 +11,7 @@ export default function About() {
                 <h3>Disclaimer</h3>
                 <p>While all reasonable efforts have been made to ensure statements and publications are factually correct, Recycling now in Victoria gives no warranty regarding its accuracy, completeness or suitability for any particular purpose and to the extent permitted by law, does not accept any liability for loss or damages incurred as a result of reliance placed upon the content of this publication. Due to the voluntary nature of the survey, it is expected that there will be a degree of variation from year to year. Every attempt is made to ensure that yearly variations are minimised. This data is provided on the basis that all persons accessing it undertake responsibility for assessing the relevance and accuracy of its content.<br/><br/></p>
                 <h3>Contact Us</h3>
-                <p>Monash University FIT5120 TA34 Group <br/>Sean<br/>Email: xyan0101@student.monash.edu</p>
+                <p>Monash University FIT5120 TA34 Group <br/></p>
             </div>
         </div>
     </div>

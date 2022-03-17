@@ -11,6 +11,11 @@ const data = [
   { name: "Warrnambool City Council", id:7, value: 60.4 }
 ];
 
+const d1 = [
+  { name: "Bass Coast Shire Council", id:1, value: 75.8 },
+  { name: "Rest", id:1, value: 24.2 }
+]
+
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -39,7 +44,7 @@ const renderActiveShape = (props) => {
   return (
     <g>
       <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
-        {payload.name}
+        {payload.value+"%"}
       </text>
       <Sector
         cx={cx}
@@ -98,7 +103,7 @@ export default function PieChartVis() {
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
-        data={data}
+        data={d1}
         cx={200}
         cy={200}
         innerRadius={60}

@@ -10,13 +10,42 @@ export default class singlecouncilcanvas extends PureComponent {
     councilData:null
   }
 
+  councilImg = [
+    {id:"5", imgUrl:"https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/basscoast.jpg?raw=true"},
+    {id:"7", imgUrl:"https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/bayside.jpg?raw=true"},
+    {id:"16", imgUrl:""},
+    {id:"20", imgUrl:""},
+    {id:"79", imgUrl:"https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/frankston.jpg?raw=true"}
+  ]
+
+  generateCouncilImgUrl = () =>{
+    console.log(typeof(this.state.councilOption))
+    switch(this.state.councilOption){
+      case "5":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/basscoast.jpg?raw=true"
+        break
+      case "7":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/bayside.jpg?raw=true"
+        break
+      case "16":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/corangamite.jpg?raw=true"
+        break
+      case "20":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/frankston.jpg?raw=true"
+        break
+      case "79":
+        return "https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/main/benalla.jpg?raw=true"
+        break
+    }
+  }
+
   componentDidMount(){
     axios
     .get(`https://recycling-vic-back-end.herokuapp.com/v1/api/council/searchCouncil/5`)
     .then(res =>{
       const responseData = res.data;
       this.setState({
-        councilOption:this.state.councilOption,
+        councilOption:"5",
         categoryOption:this.state.categoryOption,
         councilData:responseData
       })
@@ -82,7 +111,7 @@ export default class singlecouncilcanvas extends PureComponent {
           <div style={{display:"flex",justifyContent:"space-evenly", marginTop:"50px", flexWrap:"no-wrap"}}>
             <div>
               <h3>Council Location</h3>
-              <img style={{width:"400px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/monash.jpg?raw=true'></img>
+              <img style={{width:"400px"}} src={this.generateCouncilImgUrl()}></img>
             </div>
 
             <div>
@@ -95,16 +124,7 @@ export default class singlecouncilcanvas extends PureComponent {
               <h3>Recycle Service</h3>
               <div style={{display:"flex",justifyContent:"center", flexWrap:"wrap", width:"340px"}}>
                 <div>
-                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/garbage1.png?raw=true'></img>
-                </div>
-                <div>
-                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/recycle1.png?raw=true'></img>
-                </div>
-                <div>
-                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/organics1.png?raw=true'></img>
-                </div>
-                <div>
-                  <img style={{width:"170px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/431992806e095bd58911998013ac4f73007bbef3/recyclebin/glass1.png?raw=true'></img>
+                  <img style={{width:"340px"}} src='https://github.com/zx0217/RecyclingNowInVictoriaIMG/blob/3d404ed739f2e74576b9d87e7cdedfd3105adddf/Bins/no-glass.jpg?raw=true'></img>
                 </div>
               </div>
             </div>
