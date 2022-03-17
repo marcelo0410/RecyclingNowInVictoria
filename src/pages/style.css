@@ -125,6 +125,11 @@
     width: 150px;
 }
 
-/* .banner2 a{
-    
-} */
+.img-hover img{
+    width: "180px";
+    height: "180px";
+}
+.img-hover img:hover{
+    transform: scale(1.3);
+    z-index: 1;
+}

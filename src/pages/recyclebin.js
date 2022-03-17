@@ -48,7 +48,7 @@ export default class recyclebin extends Component {
       <div style={{marginTop:"30px", textAlign:"left", marginLeft:"20px", fontSize:"17px", fontWeight:"bold"}}>Click on bins for detailed information...</div>
       <div class="card-group ms-2 mt-2">
         <div class="card">
-          <div id="1" onClick={this.getId}>
+          <div id="1" onClick={this.getId} className="img-hover">
             <img src={this.state.disable[0]? (this.photoPrefix+this.binArray[0].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[0].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="General waste"/>
           </div>
           {!this.state.disable[0] && (
@@ -69,7 +69,7 @@ export default class recyclebin extends Component {
           
         </div>
         <div class="card">
-          <div id="2" onClick={this.getId}>
+          <div id="2" onClick={this.getId} className="img-hover">
             <img src={this.state.disable[1]? (this.photoPrefix+this.binArray[1].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[1].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="..."/>
           </div>
           {!this.state.disable[1] && (<div class="card-body">
@@ -87,7 +87,7 @@ export default class recyclebin extends Component {
           </div>)}
         </div>
         <div class="card">
-          <div id="3" onClick={this.getId}>
+          <div id="3" onClick={this.getId} className="img-hover">
             <img src={this.state.disable[2]? (this.photoPrefix+this.binArray[2].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[2].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="..."/>
           </div>
           {!this.state.disable[2] && (<div class="card-body">
@@ -104,7 +104,7 @@ export default class recyclebin extends Component {
           
         </div>
         <div class="card">
-          <div id="4" onClick={this.getId}>
+          <div id="4" onClick={this.getId} className="img-hover">
             <img src={this.state.disable[3]? (this.photoPrefix+this.binArray[3].imgUrl+this.photoPostfix):(this.photoPrefix+this.binArray[3].hoverUrl+this.photoPostfix)} class="card-img-top img-same-wh" alt="..."/>
           </div>
           {!this.state.disable[3] && (<div class="card-body">

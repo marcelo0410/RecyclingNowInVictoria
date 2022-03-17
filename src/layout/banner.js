@@ -8,7 +8,7 @@ export default class banner extends Component {
       <div className='banner' style={{marginLeft:"32px"}}>
           <p className="mt-2" ><br/>Do you really know</p>
           <p className="mt-1" style={{color:"#55C595",fontWeight: "bold"}}>GARBAGE <br/>CLASSIFICATION</p>
-          <NavLink to="/sorting">Explore More&gt;&gt;</NavLink>
+          <NavLink to="/sorting">Sorting now&gt;&gt;</NavLink>
       </div>
     )
   }

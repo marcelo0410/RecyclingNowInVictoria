@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './style.css'
 
 export default class wastemouseenter extends Component {
 
@@ -93,10 +94,9 @@ export default class wastemouseenter extends Component {
           <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap", width:"900px", marginLeft:"35px", marginBottom:"30px"}}>
               {
                 this.state.photoArray.map((item, index) =>(
-                  <div key={item.id}>
+                  <div key={item.id} className="img-hover">
                     <img 
                       src={item.disable? (item.imageUrl):(item.genre)}
-                      className=""
                       style={{width:"180px", height:"180px"}}
                       alt={item.title}
                       id={item.id}
